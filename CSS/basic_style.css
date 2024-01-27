@@ -1,0 +1,111 @@
+body {
+    background-color: #fff;
+}
+
+h1 {
+    color: rgba(159, 98, 76, 1)
+    ;
+    margin-left: 100px;
+    text-shadow: 10px 5px 10px rgba(107, 142, 35, 1)
+
+}
+
+.container{
+    width: 450px;
+    height: 450px;
+    background-color: #faebd7;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+
+/*----------------------------- 
+SELECT ALL SQUARES IN THE ARRAY
+------------------------------*/
+
+.container .squares:nth-child(-n+4) {
+    background-image: url(../Images/Thumb/Icons/icons2.png);
+    color: #fff;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 25%;
+    cursor:crosshair;
+    transition: transform .5s ease-in-out;
+}
+
+/*----------------------------- 
+SELECT ALL PARAGRAPH IN THE ARRAY
+------------------------------*/
+
+.squares:nth-child(-n+4) P{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    text-shadow: 6px 2px 2px rgba(159, 98, 76, 1);`
+}
+
+.squares:nth-child(1){
+    background: #4240ff;
+}
+
+.squares:nth-child(2){
+    background: #ab3fdd;
+}
+
+.squares:nth-child(3){
+    background: #ae163e
+
+}
+
+.squares:nth-child(4){
+    background: #00b200
+}
+
+/*----------------------------- 
+        HOVER TRANSLATE & TRANSFORM EFFECT
+------------------------------*/
+
+.container .squares:nth-child(-n+4):hover{
+    background-image: url(../Images/Thumb/Icons/icons.png);
+    transform: scale(.5);
+    animation-name: race;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(2.5, .2, .3, 2);
+
+}
+.squares:nth-child(1):hover{
+    background: yellow;
+}
+
+.squares:nth-child(2):hover{
+    background:black;
+}
+
+.squares:nth-child(3):hover{
+    background: lightseagreen;
+
+}
+
+.squares:nth-child(4):hover{
+    background: pink;
+}
+
+/*----------------------------- 
+        ANIMATION EFFECT
+------------------------------*/
+
+@keyframes race {
+    0%, 100% {
+        transform: translateY(0px);
+        background-image:url(../Images/Thumb/Icons/icons.png) ;
+    }
+    50% {
+        transform: translateY(300px);
+    }
+}
+
